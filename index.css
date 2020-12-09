@@ -1,5 +1,9 @@
-body{
-    background-color: #eee;
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+body {
+  background-color: #eee;
 }
 .homepage {
   width: 100vw;
@@ -25,18 +29,30 @@ body{
   top: 0;
   width: 400px;
   height: 200px;
-  background-color: #aaf;
+  background-image: url(./introduction/images/nyc.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7;
 }
 .headpic {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  background-color: #faf;
-  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  margin-top: 100px;
+  background-image: url(./introduction/images/IMG_0775.jpg);
+  background-size: cover;
+  background-position: center;
   z-index: 1;
 }
-.name{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 2rem;
-    margin: 10px auto;
+.name {
+  font-size: 2rem;
+  margin: 10px auto 5px auto;
+}
+.job {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.content {
+  text-align: center;
+  font-size: 1.25rem;
 }
