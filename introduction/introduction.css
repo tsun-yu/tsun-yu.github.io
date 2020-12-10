@@ -5,7 +5,12 @@
     "Lucida Sans", Arial, sans-serif;
   color: #555;
 }
-
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+}
 .page1,
 .page2 {
   background-size: cover;
@@ -22,7 +27,7 @@
   display: flex;
 }
 .page1 > div {
-  padding: 50px;
+  padding: 15vh;
   overflow: auto;
 }
 .page1 > div::-webkit-scrollbar {
@@ -58,5 +63,8 @@
 @media (max-width: 540px) {
   .page1 > div {
     padding: 10px;
+  }
+  .box {
+    min-height: 200px;
   }
 }
