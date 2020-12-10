@@ -1,113 +1,62 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #555;
 }
 
+.page1,
+.page2 {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.page1 {
+  background-image: url(./images/dogncat.jpg);
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
 .flex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
 }
-
-.container {
-    background-image: url(./images/fezbot2000-deNAgNLr0b8-unsplash.jpg);
-    background-size: cover;
-    background-position: center 103vw;
+.page1 > div {
+  padding: 50px;
+  overflow: auto;
 }
-
-header {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    min-height: 20vh;
-    /* background-color: #faa; */
+.page1 > div::-webkit-scrollbar {
+  display: none;
 }
-
-h2 {
-    font-size: 80px;
-    color: rgba(240, 248, 255, 0.76);
-    text-align: center;
-}
-
-.circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    transition: .5S;
-}
-
-.circle img {
-    height: 100%;
-}
-
-/* .circle:hover {
-    width: 300px;
-    height: 300px;
-} */
-
-main {
-    min-height: 70vh;
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
 .box {
-    width: 300px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    box-shadow: 4px 4px 10px;
-    transition: 2s;
+  width: 80vw;
+  max-width: 600px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 10px;
+  margin: 10px;
+}
+.box > .flex {
+  flex-direction: column;
+  justify-content: center;
+  height: 85%;
+}
+.box > .flex > .flex {
+  justify-content: space-between;
+}
+.title {
+  height: 15%;
 }
 
-.box img {
-    width: 50%;
+.page2 {
+  background-image: url(./images/nyc.jpg);
 }
 
-h3 {
-    font-size: 30px;
-    text-align: center;
+@media (max-width: 540px) {
+  .page1 > div {
+    padding: 10px;
+  }
 }
-.box div {
-    display: none;
-}
-.info {
-    margin: auto 0; 
-    align-content: center;
-}
-p {
-    width: 80%;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 400;
-    margin: 15px 10%;
-    border-bottom:solid 1px rgba(114, 113, 113, 0.658);
-    padding-bottom: 10px;
-}
-
-span{
-    color: rgb(233, 109, 109);
-}
-.box:hover {
-    height: 400px;
-    overflow: hidden;
-}
-
-.box:hover div {
-    display: block;
-}
-
-.box:hover h3 {
-    background-color: rgba(255, 217, 0, 0.541);
-}
-

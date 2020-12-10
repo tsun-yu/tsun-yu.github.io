@@ -47,12 +47,39 @@ body {
 .name {
   font-size: 2rem;
   margin: 10px auto 5px auto;
+  color: #555;
 }
 .job {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #555;
 }
 .content {
   text-align: center;
   font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #555;
 }
+
+.icon {
+  margin: auto 10px;
+}
+
+.content > .icon {
+  color: #555;
+  font-size: 2rem;
+}
+.content > .icon:hover {
+  color: purple;
+}
+.blankDiv{
+  visibility: hidden;
+}
+.readmore{
+  border-bottom: .5px solid #555;
+}
+.readmore>a{
+  text-decoration: none;
+  color: #555;
+}
+
