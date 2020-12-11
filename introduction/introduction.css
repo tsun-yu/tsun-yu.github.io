@@ -5,30 +5,62 @@
     "Lucida Sans", Arial, sans-serif;
   color: #555;
 }
+.d-flex {
+  display: flex;
+}
 .navbar {
   width: 100vw;
   height: 10vh;
   background-color: rgba(0, 0, 0, 0.85);
   position: fixed;
 }
+.homepage,
 .page1,
 .page2 {
   background-size: cover;
   background-position: center;
   height: 100vh;
 }
+.homepage {
+  height: 100vh;
+  background-image: url(./images/nyc.jpg);
+}
+.homepage > div {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.homepage > div > div:not(.smallword) {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 900;
+  text-shadow: 1px 1px 2px #555;
+}
+.smallword {
+  color: #ffffffd0;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
 .page1 {
   background-image: url(./images/dogncat.jpg);
   background-attachment: fixed;
-  display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.flex {
-  display: flex;
+.sectionTitle {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px #555;
+  margin: 2rem auto;
 }
-.page1 > div {
-  padding: 15vh;
+.page1 > div:not(.sectionTitle) {
   overflow: auto;
+  background-color: #0000001f;
 }
 .page1 > div::-webkit-scrollbar {
   display: none;
@@ -36,28 +68,50 @@
 .box {
   width: 80vw;
   max-width: 600px;
-  height: 150px;
+  /* height: 150px; */
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
 }
-.box > .flex {
+.box > .d-flex {
   flex-direction: column;
   justify-content: center;
-  height: 85%;
+  /* height: 85%; */
+  margin: 1vh 0;
 }
-.box > .flex > .flex {
+.box > .d-flex > .d-flex {
   justify-content: space-between;
 }
+.box > .d-flex > .d-flex > div {
+  color: rgb(29, 29, 29);
+}
+.box > .d-flex > div {
+  color: rgb(39, 39, 39);
+}
 .title {
-  height: 15%;
+  font-size: 1.125rem;
 }
 
+.topic {
+  height: 20vh;
+  background-color: #eee;
+  justify-content: center;
+  align-items: center;
+}
+.topic > div {
+  font-size: 3rem;
+  color: #555;
+}
+.skill {
+  background-color: #a5a58d;
+  height: 60vh;
+}
 .page2 {
   background-image: url(./images/nyc.jpg);
+  background-attachment: fixed;
 }
 
 @media (max-width: 540px) {
