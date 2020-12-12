@@ -48,21 +48,26 @@
 .page1 {
   background-image: url(./images/dogncat.jpg);
   background-attachment: fixed;
+}
+.page1bcc {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  width: 100vw;
   align-items: center;
   flex-direction: column;
 }
 .sectionTitle {
   color: #ffffff;
-  font-size: 50px;
-  font-weight: bolder;
+  font-size: 3rem;
   text-shadow: 1px 1px 2px #555;
   margin: 2rem auto;
 }
-.page1 > div:not(.sectionTitle) {
+.page1 > div > div:not(.sectionTitle) {
   overflow: auto;
-  background-color: #0000001f;
+  /* background-color: #0000001f; */
+  height: 75vh;
 }
-.page1 > div::-webkit-scrollbar {
+.page1 > div > div::-webkit-scrollbar {
   display: none;
 }
 .box {
@@ -95,19 +100,38 @@
   font-size: 1.125rem;
 }
 
-.topic {
-  height: 20vh;
+.skill {
   background-color: #eee;
-  justify-content: center;
-  align-items: center;
+  height: 60vh;
+  padding: 5% 10%;
 }
-.topic > div {
+.topic {
   font-size: 3rem;
   color: #555;
+  text-align: center;
+  height: 20%;
 }
-.skill {
-  background-color: #a5a58d;
-  height: 60vh;
+.skill > .d-flex {
+  height: 70%;
+}
+.skill > .d-flex > .d-flex {
+  width: 33.333%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.skill > .d-flex > .d-flex > div:nth-child(1) {
+  font-size: 1.75rem;
+}
+.skill > .d-flex > .d-flex > :nth-child(2) {
+  font-size: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.skill > .d-flex > .d-flex >.d-flex>div{
+  margin: 10px 0;
 }
 .page2 {
   background-image: url(./images/nyc.jpg);
