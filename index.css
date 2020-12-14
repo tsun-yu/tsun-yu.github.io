@@ -72,14 +72,52 @@ body {
 .content > .icon:hover {
   color: purple;
 }
-.blankDiv{
+.blankDiv {
   visibility: hidden;
 }
-.readmore{
-  border-bottom: .5px solid #555;
+.readmore {
+  border-bottom: 0.5px solid #555;
 }
-.readmore>a{
+.readmore > a {
   text-decoration: none;
   color: #555;
 }
 
+@media (max-width: 540px) {
+  .infoCard {
+    width: 90vw;
+    height: 135vw;
+  }
+  .wallpaper {
+    width: 90vw;
+    height: 45vw;
+  }
+  .headpic {
+    width: 45vw;
+    height: 45vw;
+    margin-top: 22vw;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  .name {
+    font-size: 1.25rem;
+  }
+  .job {
+    font-size: 1.125rem;
+  }
+  .content {
+    font-size: 1rem;
+  }
+
+  .icon {
+    margin: auto 0.5rem;
+  }
+
+  .content > .icon {
+    font-size: 1rem;
+  }
+  .readmore {
+    margin-bottom: 0.5rem;
+  }
+}
