@@ -5,6 +5,13 @@
     "Lucida Sans", Arial, sans-serif;
   color: #555;
 }
+hr {
+  border: 0;
+  height: 4px;
+  background-color: #fdc300;
+  width: 50px;
+  margin: 30px auto;
+}
 .d-flex {
   display: flex;
 }
@@ -39,35 +46,48 @@
   font-weight: 900;
   text-shadow: 1px 1px 2px #555;
 }
-.smallword {
+.smallword > div {
   color: #ffffffd0;
   font-size: 1.125rem;
   text-align: center;
+}
+.smallword > div:nth-child(2) {
+  color: #fdc300;
 }
 
 .page1 {
   background-image: url(./images/dogncat.jpg);
   background-attachment: fixed;
 }
-.page1bcc {
-  background-color: rgba(0, 0, 0, 0.1);
-  height: 100vh;
+.page1 > div {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 90vh;
   width: 100vw;
+  padding: 5vh 0;
+}
+.page1 > div > .d-flex {
   align-items: center;
   flex-direction: column;
 }
+.topic {
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
 .sectionTitle {
   color: #ffffff;
   font-size: 3rem;
-  text-shadow: 1px 1px 2px #555;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   margin: 2rem auto;
 }
-.page1 > div > div:not(.sectionTitle) {
+.page1 > div > div > div:not(.topic) {
   overflow: auto;
   /* background-color: #0000001f; */
   height: 75vh;
 }
-.page1 > div > div::-webkit-scrollbar {
+.page1 > div > div > div::-webkit-scrollbar {
   display: none;
 }
 .box {
@@ -98,19 +118,53 @@
 }
 .title {
   font-size: 1.125rem;
+  font-weight: 500;
+}
+.about {
+  background-color: #fdc300;
+  padding: 5% 0;
+  height: 40vh;
+}
+.about hr {
+  background-color: #fff;
+}
+.aboutContent {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.aboutContent > div {
+  color: #fff;
+  font-size: 1.25rem;
+}
+.linkTo {
+  margin: 2rem;
+}
+.linkTo a {
+  margin: 0 0.5rem;
+}
+.linkTo i {
+  color: #fff;
+  font-size: 2rem;
+  transition: 0.5s;
+}
+.linkTo i:hover {
+  color: #fda400;
 }
 
+.aboutContent > div:nth-child(1) {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
 .skill {
   background-color: #eee;
-  height: 60vh;
+  height: 50vh;
   padding: 5% 10%;
 }
-.topic {
-  font-size: 3rem;
-  color: #555;
-  text-align: center;
-  height: 20%;
+.skill .topic {
+  color: rgb(17, 17, 17);
 }
+
 .skill > .d-flex {
   height: 70%;
 }
@@ -121,7 +175,8 @@
   align-items: center;
 }
 .skill > .d-flex > .d-flex > div:nth-child(1) {
-  font-size: 1.75rem;
+  font-size: 1.85rem;
+  color: #222222;
 }
 .skill > .d-flex > .d-flex > :nth-child(2) {
   font-size: 1.5rem;
@@ -130,7 +185,7 @@
   margin-top: 3vh;
 }
 
-.skill > .d-flex > .d-flex >.d-flex>div{
+.skill > .d-flex > .d-flex > .d-flex > div {
   margin: 10px 0;
 }
 .page2 {
