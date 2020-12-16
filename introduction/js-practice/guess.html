@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUESS</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./guess.css" />
+  </head>
+  <body>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="buttonGroup">
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-primary mx-3" id="start">Start!</button>
+            <input type="number" id="reply" />
+            <button id="confirm" class="btn btn-primary mx-3" disabled>
+              Confirm
+            </button>
+            <button id="restart" class="btn btn-primary mr-3" disabled>
+              Restart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center mt-3 box">
+        <table id="history"></table>
+      </div>
+    </div>
+
+    <script src="./guess.js"></script>
+  </body>
+</html>
