@@ -214,7 +214,8 @@ hr {
   margin-bottom: 1rem;
   border-bottom: #eee solid 1px;
 }
-.mywork {
+.mywork,
+.mywork2 {
   width: 95%;
   height: 60vh;
   text-align: center;
@@ -279,8 +280,8 @@ hr {
   .workTitle {
     font-size: 1rem;
   }
-  .myworkImg {
-    /* width:  100%; */
+  .myworkImg2 {
+    width: 100%;
   }
   .page2,
   .page2 > div {

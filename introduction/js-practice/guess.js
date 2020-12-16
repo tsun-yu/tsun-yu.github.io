@@ -11,36 +11,11 @@ const startBtn = slr("#start");
 const restartBtn = slr("#restart");
 const sendBtn = slr("#confirm");
 const input = slr("#reply");
-const historyList = slr("#history");
-const resultList = slr("#result");
+const tbodyDisplay = slr("#tbodyDisplay");
 
-// 顯示紀錄
-const displayHistory = (a, b) => {
-  let display = `<tbody>`;
-  if (a == 4) {
-    for (i = 0; i < history.length; i++) {
-      display += `<tr><td>${i + 1}.  </td>`;
-      display += `<td>${history[i].join("")}  </td>`;
-      i + 1 == history.length
-        ? (display += `<td>bingo</td></tr>`)
-        : (display += `<td>${result[i]}</td>`);
-
-      display += `</tr>`;
-    }
-  } else {
-    for (i = 0; i < history.length; i++) {
-      display += `<tr><td>${i + 1}.  </td>`;
-      display += `<td>${history[i].join("")}  </td>`;
-      display += `<td>${result[i]}</td>`;
-      display += `</tr>`;
-    }
-  }
-  display += `</tbody>`;
-  historyList.innerHTML = display;
-};
-
-// 產生答案函數
+//答案
 let ans = [];
+// 產生答案函數
 const getAns = () => {
   ans = [];
   while (ans.length < 4) {
@@ -51,70 +26,79 @@ const getAns = () => {
     }
     flag == 0 && ans.push(String(a));
   }
-  console.log(ans);
+  // console.log(ans);
 };
 
-let history = [];
-let result = [];
+let display = ``;
+let turn = 0;
+// 顯示紀錄
+const displayHistory = (a, b, turn, reply) => {
+  a == 4
+    ? (display += `<tr><td>${turn}.</td><td>${reply}</td><td>BINGO</td></tr>`)
+    : (display += `<tr><td>${turn}.</td><td>${reply}</td><td>${a}A${b}B</td></tr>`);
 
-// 傳送回答
+  tbodyDisplay.innerHTML = display;
+};
+
+// 傳送回答及驗證
 const operation = () => {
-  let tmp = input.value.split("");
-  let tmpResult = ``;
+  let reply = input.value;
+  let replyArr = reply.split("");
   input.value = "";
-  if (tmp.length != 4) {
+  let a = 0;
+  let b = 0;
+  if (replyArr.length != 4) {
     alert("請輸入四位數字");
     input.value = "";
   } else {
-    let a = 0;
-    let b = 0;
     for (i = 0; i < 4; i++) {
-      if (ans[i] === tmp[i]) {
+      if (ans[i] === replyArr[i]) {
         a++;
       } else {
         for (j = 0; j < 4; j++) {
-          if (ans[i] === tmp[j]) {
+          if (ans[i] === replyArr[j]) {
             b++;
             break;
           }
         }
       }
-      tmpResult = `${a}A${b}B`;
     }
-    history.push(tmp);
-    result.push(tmpResult);
-
-    displayHistory(a, b);
-    console.log(result);
+    turn += 1;
+    displayHistory(a, b, turn, reply);
   }
 };
 
-// 按鈕功能
+// 開始按鈕
 startBtn.addEventListener("click", () => {
-  historyList.innerHTML = `<div>START!</div>`;
+  tbodyDisplay.innerHTML = `<div>START!</div>`;
   setTimeout(() => {
-    historyList.innerHTML = ``;
-  }, 2000);
+    tbodyDisplay.innerHTML = ``;
+  }, 500);
   startBtn.setAttribute("disabled", "");
   restartBtn.removeAttribute("disabled");
   sendBtn.removeAttribute("disabled");
   getAns();
 });
-restartBtn.addEventListener("click", () => {
-  historyList.innerHTML = `<div class="spinner-border text-primary" role="status">
-  <span class="sr-only">Loading...</span>
-</div>`;
-  setTimeout(() => {
-    historyList.innerHTML = ``;
-  }, 500);
-  getAns();
-  history.length = 0;
-  result.length = 0;
-});
+
+//enter鍵
 input.addEventListener("keypress", (e) => {
   e.key === "Enter" && operation();
 });
 
+// 重新按鈕
+restartBtn.addEventListener("click", () => {
+  tbodyDisplay.innerHTML = `<div class="spinner-border text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>`;
+  setTimeout(() => {
+    tbodyDisplay.innerHTML = ``;
+  }, 500);
+  display = ``;
+  turn = 0;
+  getAns();
+});
+
+//確認按鈕
 sendBtn.addEventListener("click", () => {
   operation();
 });

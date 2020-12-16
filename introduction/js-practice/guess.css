@@ -11,9 +11,11 @@ body {
 }
 
 .buttonGroup {
-  height: 50px;
   width: 100%;
   border-bottom: solid 0.5px #555;
+}
+.buttonGroup > .d-flex {
+  justify-content: around;
 }
 
 @media (max-width: 540px) {
@@ -23,6 +25,21 @@ body {
   }
 
   .buttonGroup > .d-flex {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  .buttonGroup > .d-flex > button,
+  input {
+    margin: 1px;
+  }
+  #reply {
+    width: 90%;
+  }
+  #start {
+    width: 30%;
+  }
+  #confirm,
+  #restart {
+    width: 45%;
   }
 }
