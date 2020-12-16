@@ -77,6 +77,7 @@ startBtn.addEventListener("click", () => {
   startBtn.setAttribute("disabled", "");
   restartBtn.removeAttribute("disabled");
   sendBtn.removeAttribute("disabled");
+  input.removeAttribute("disabled");
   getAns();
 });
 

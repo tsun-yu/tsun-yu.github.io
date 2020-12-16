@@ -15,12 +15,12 @@ body {
   border-bottom: solid 0.5px #555;
 }
 .buttonGroup > .d-flex {
-  justify-content: around;
+  justify-content: space-around;
 }
 
 @media (max-width: 540px) {
   .container {
-    width: 250px;
+    width: 90vw;
     height: 90vh;
   }
 
