@@ -76,12 +76,11 @@ hr {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.page1 > div > div > div:not(.topic) {
+.page1Content {
   overflow: auto;
-  /* background-color: #0000001f; */
   height: 75vh;
 }
-.page1 > div > div > div::-webkit-scrollbar {
+.page1Content::-webkit-scrollbar {
   display: none;
 }
 .box {
@@ -188,7 +187,7 @@ hr {
 }
 .page2 > div {
   background-color: rgba(0, 0, 0, 0.2);
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
 }
 .page2 > div > div {
