@@ -6,15 +6,23 @@
     <title>Introduction</title>
     <link rel="stylesheet" href="./introduction.css" />
     <link rel="stylesheet" href="../css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <!-- <div class="navbar"></div> -->
     <div class="homepage">
       <div class="d-flex">
-        <div>It's all about</div>
-        <div>WAYNE HUANG</div>
+        <div class="hpTitle animate__animated animate__flipInX">
+          It's all about
+        </div>
+        <div class="hpTitle animate__animated animate__flipInX">
+          WAYNE HUANG
+        </div>
         <hr />
-        <div class="smallword">
+        <div class="smallword animate__animated animate__flipInY">
           <div>Welcome To My Website</div>
           <div>Skills | Experience | Works</div>
         </div>
@@ -46,11 +54,11 @@
       <div class="topic">SKILLS</div>
       <hr />
       <div class="d-flex">
-        <div class="d-flex">
+        <div class="d-flex skillSection">
           <div>英語技能</div>
           <div>多益成績:810</div>
         </div>
-        <div class="d-flex">
+        <div class="d-flex skillSection">
           <div>前端語言</div>
           <div class="d-flex">
             <div class="skillsItems"><i class="fab fa-html5"></i> HTML</div>
@@ -58,9 +66,9 @@
             <div class="skillsItems"><i class="fab fa-js"></i> JavaScript</div>
           </div>
         </div>
-        <div class="d-flex">
+        <div class="d-flex skillSection">
           <div>前端框架&函式庫</div>
-          <div class="d-flex skillsItems">
+          <div class="d-flex">
             <div class="skillsItems"><i class="fab fa-react"></i> React</div>
             <div class="skillsItems">
               <i class="fab fa-bootstrap"></i> Bootstrap
@@ -77,7 +85,7 @@
         <div class="d-flex">
           <div class="topic">EXPERIENCE</div>
           <hr />
-          <div class="page1Content">
+          <div class="experience">
             <!-- 學歷 -->
             <div class="box">
               <div>學歷</div>
@@ -90,7 +98,7 @@
                   <div>Soochow University</div>
                   <div>Taipei, Taiwan</div>
                 </div>
-                <div>
+                <div class="boxContent">
                   - 選修個體經濟學、總體經濟學、智慧財產權法、餐旅管理等 <br />
                   - 旁聽國貿研究所電子商務課程 <br />
                   - 課外活動：系男籃、拳擊社、舉辦迎新宿營
@@ -109,7 +117,7 @@
                   <div>Institute for Information Industry</div>
                   <div>Taipei, Taiwan</div>
                 </div>
-                <div>
+                <div class="boxContent">
                   -
                   React專題：前端使用React以及Bootstrap,後端使用nodejs，個人主要負責首頁的功能實現及視覺呈現，以及全組的整合
                 </div>
@@ -127,7 +135,7 @@
                   <div>八達國際物流</div>
                   <div>Taipei, Taiwan</div>
                 </div>
-                <div>
+                <div class="boxContent">
                   - 海空運報價：年業績創造利潤百萬 <br />
                   負責海空運報價、解答運輸上的問題、維護與客戶關係、居中協調客人及船公司，需了解海空運運輸知識、進出口文件、了解進口報關規範
                 </div>
@@ -145,7 +153,7 @@
                   <div>Lalalocker</div>
                   <div>Taipei, Taiwan</div>
                 </div>
-                <div>
+                <div class="boxContent">
                   - 利用自己搭建的網路平台媒合店家的彈性空間成為旅客的寄物點
                   <br />
                   - 合作陌生店家開發：三個月20+合作店家 <br />

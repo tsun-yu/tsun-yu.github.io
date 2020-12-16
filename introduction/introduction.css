@@ -32,7 +32,7 @@ hr {
   height: 100vh;
   background-image: url(./images/nyc.jpg);
 }
-.homepage > div {
+.homepage > .d-flex {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
   width: 100vw;
@@ -40,7 +40,7 @@ hr {
   justify-content: center;
   flex-direction: column;
 }
-.homepage > div > div:not(.smallword) {
+.hpTitle {
   color: #ffffff;
   font-size: 5rem;
   font-weight: 900;
@@ -76,17 +76,16 @@ hr {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.page1Content {
+.experience {
   overflow: auto;
   height: 75vh;
 }
-.page1Content::-webkit-scrollbar {
+.experience::-webkit-scrollbar {
   display: none;
 }
 .box {
   width: 80vw;
   max-width: 600px;
-  /* height: 150px; */
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.2);
@@ -108,7 +107,7 @@ hr {
 .box > .d-flex > .d-flex > div {
   color: rgb(29, 29, 29);
 }
-.box > .d-flex > div {
+.boxContent {
   color: rgb(39, 39, 39);
 }
 .title {
@@ -161,17 +160,17 @@ hr {
 .skill > .d-flex {
   height: 70%;
 }
-.skill > .d-flex > .d-flex {
+.skillSection {
   width: 33.333%;
   height: 100%;
   flex-direction: column;
   align-items: center;
 }
-.skill > .d-flex > .d-flex > div:nth-child(1) {
+.skillSection > div:nth-child(1) {
   font-size: 1.85rem;
   color: #222222;
 }
-.skill > .d-flex > .d-flex > :nth-child(2) {
+.skillSection > .d-flex {
   font-size: 1.5rem;
   flex-direction: column;
   align-items: center;
@@ -187,7 +186,7 @@ hr {
 }
 .page2 > div {
   background-color: rgba(0, 0, 0, 0.2);
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
 }
 .page2 > div > div {
@@ -224,7 +223,7 @@ hr {
 }
 
 @media (max-width: 540px) {
-  .homepage > div > div:not(.smallword) {
+  .hpTitle {
     font-size: 2.5rem;
   }
   .smallword > div {
@@ -252,14 +251,14 @@ hr {
   .skill > .d-flex {
     flex-direction: column;
   }
-  .skill > .d-flex > .d-flex {
+  .skillSection {
     width: 100%;
     margin-bottom: 10vh;
   }
-  .skill > .d-flex > .d-flex > div:nth-child(1) {
+  .skillSection > div:nth-child(1) {
     font-size: 1.5rem;
   }
-  .skill > .d-flex > .d-flex > :nth-child(2) {
+  .skillSection > .d-flex {
     font-size: 1.125rem;
   }
   .title {
@@ -282,7 +281,8 @@ hr {
   .myworkImg {
     width: 100%;
   }
-  .page2 {
+  .page2,
+  .page2 > div {
     height: 200vh;
   }
 }
