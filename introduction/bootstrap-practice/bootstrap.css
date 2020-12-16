@@ -154,7 +154,7 @@ nav .dropdown:hover .dropdown-menu {
 .nigga h2 {
   font-size: 128px;
   line-height: 1em;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.651);
   font-weight: 900;
   font-family: inherit;
 }
@@ -162,7 +162,7 @@ nav .dropdown:hover .dropdown-menu {
   font-size: 64px;
   font-weight: 700;
   line-height: 0.9em;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.671);
   font-family: inherit;
 }
 

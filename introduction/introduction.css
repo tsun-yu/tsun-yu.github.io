@@ -5,6 +5,9 @@
     "Lucida Sans", Arial, sans-serif;
   color: #555;
 }
+a {
+  text-decoration: none;
+}
 hr {
   border: 0;
   height: 4px;
@@ -195,9 +198,7 @@ hr {
 .works > div {
   width: 50%;
 }
-.works a {
-  text-decoration: none;
-}
+
 .works .d-flex {
   flex-direction: column;
   align-items: center;
