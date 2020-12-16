@@ -214,13 +214,13 @@ hr {
   margin-bottom: 1rem;
   border-bottom: #eee solid 1px;
 }
-.mywork,
-.mywork2 {
+.mywork {
   width: 95%;
   height: 60vh;
   text-align: center;
 }
-.myworkImg {
+.myworkImg,
+.myworkImg2 {
   height: 100%;
 }
 
