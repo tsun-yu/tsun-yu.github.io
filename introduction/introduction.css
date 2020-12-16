@@ -270,21 +270,20 @@ hr {
   .mobileDate {
     flex-direction: column;
   }
-}
-
-.works {
-  flex-wrap: wrap;
-}
-.works > div {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-.workTitle {
-  font-size: 1rem;
-}
-.myworkImg {
-  width: 100%;
-}
-.page2 {
-  height: 200vh;
+  .works {
+    flex-wrap: wrap;
+  }
+  .works > div {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .workTitle {
+    font-size: 1rem;
+  }
+  .myworkImg {
+    width: 100%;
+  }
+  .page2 {
+    height: 200vh;
+  }
 }
