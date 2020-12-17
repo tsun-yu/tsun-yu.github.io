@@ -104,6 +104,11 @@ sendBtn.addEventListener("click", () => {
   operation();
 });
 
+document.querySelector(".number").addEventListener("click", (e) => {
+  console.log(e);
+  e.classList.add("numberClick");
+});
+
 // 判斷AB
 // for (i=0 ; i<4 ; i++){
 //     let a = 0

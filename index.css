@@ -45,18 +45,18 @@ body {
   z-index: 1;
 }
 .name {
-  font-size: 2rem;
+  font-size: 32px;
   margin: 10px auto 5px auto;
   color: #555;
 }
 .job {
-  font-size: 1.5rem;
+  font-size: 24px;
   margin-bottom: 20px;
   color: #555;
 }
 .content {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 20px;
   margin-bottom: 10px;
   color: #555;
 }
@@ -67,7 +67,7 @@ body {
 
 .content > .icon {
   color: #555;
-  font-size: 2rem;
+  font-size: 32px;
 }
 .content > .icon:hover {
   color: purple;
@@ -101,23 +101,23 @@ body {
     z-index: 1;
   }
   .name {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
   .job {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
   .content {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .icon {
-    margin: auto 0.5rem;
+    margin: auto 8px;
   }
 
   .content > .icon {
-    font-size: 1rem;
+    font-size: 16px;
   }
   .readmore {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
   }
 }
