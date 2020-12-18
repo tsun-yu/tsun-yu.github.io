@@ -30,12 +30,12 @@ const getAns = () => {
 };
 
 let display = ``;
-let turn = 0;
+let around = 0;
 // 顯示紀錄
-const displayHistory = (a, b, turn, reply) => {
+const displayHistory = (a, b, around, reply) => {
   a == 4
-    ? (display += `<tr><td>${turn}.</td><td>${reply}</td><td>BINGO</td></tr>`)
-    : (display += `<tr><td>${turn}.</td><td>${reply}</td><td>${a}A${b}B</td></tr>`);
+    ? (display += `<tr><td>${around}.</td><td>${reply}</td><td>BINGO</td></tr>`)
+    : (display += `<tr><td>${around}.</td><td>${reply}</td><td>${a}A${b}B</td></tr>`);
 
   tbodyDisplay.innerHTML = display;
 };
@@ -63,8 +63,8 @@ const operation = () => {
         }
       }
     }
-    turn += 1;
-    displayHistory(a, b, turn, reply);
+    around += 1;
+    displayHistory(a, b, around, reply);
   }
 };
 
@@ -95,7 +95,10 @@ restartBtn.addEventListener("click", () => {
     tbodyDisplay.innerHTML = ``;
   }, 500);
   display = ``;
-  turn = 0;
+  around = 0;
+  document.querySelectorAll(".number").forEach((e) => {
+    e.classList.remove("numberClick");
+  });
   getAns();
 });
 
