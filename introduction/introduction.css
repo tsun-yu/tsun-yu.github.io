@@ -59,7 +59,7 @@ hr {
 }
 
 .page1 {
-  background-image: url(./images/dogncat.jpg);
+  background-image: url(./images/lincoln-center-for-the-performing-arts-3840x2160-new-york-ny-usa-8540.jpg);
   background-attachment: fixed;
 }
 .page1 > div {
@@ -184,7 +184,7 @@ hr {
   margin: 10px 0;
 }
 .page2 {
-  background-image: url(./images/dogncat.jpg);
+  background-image: url(./images/lincoln-center-for-the-performing-arts-3840x2160-new-york-ny-usa-8540.jpg);
   background-attachment: fixed;
 }
 .page2 > div {
@@ -222,6 +222,66 @@ hr {
 .myworkImg,
 .myworkImg2 {
   height: 100%;
+}
+.contact {
+  height: 60vh;
+  padding: 5vh 10%;
+  background-color: #eee;
+}
+.contact > .topic {
+  color: #555;
+}
+.headpic {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-image: url(./images/大頭照.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.headpicOutside {
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 16rem;
+  background-color: rgba(218, 218, 218, 0.466);
+  border-radius: 50%;
+  margin: auto;
+}
+.name {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.icons {
+  text-align: center;
+  margin: 1rem 0;
+}
+.icon {
+  font-size: 2rem;
+}
+i {
+  transition: 0.5s;
+}
+i:hover {
+  color: #fdc300;
+}
+
+.footer {
+  background-image: url(./images/lincoln-center-for-the-performing-arts-3840x2160-new-york-ny-usa-8540.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer > .d-flex {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+}
+.footer > .d-flex > div {
+  color: #eee;
 }
 
 @media (max-width: 540px) {

@@ -113,35 +113,10 @@ const selectToggle = (e) => {
     : e.target.classList.add("numberClick");
 };
 
-document.querySelector("#num1").addEventListener("click", (e) => {
-  selectToggle(e);
-});
-document.querySelector("#num2").addEventListener("click", (e) => {
-  selectToggle(e);
-});
-document.querySelector("#num3").addEventListener("click", (e) => {
-  selectToggle(e);
-});
-document.querySelector("#num4").addEventListener("click", (e) => {
-  selectToggle(e);
-});
-document.querySelector("#num5").addEventListener("click", (e) => {
-  selectToggle(e);
-});
-document.querySelector("#num6").addEventListener("click", (e) => {
-  selectToggle(e);
-});
-document.querySelector("#num7").addEventListener("click", (e) => {
-  selectToggle(e);
-});
-document.querySelector("#num8").addEventListener("click", (e) => {
-  selectToggle(e);
-});
-document.querySelector("#num9").addEventListener("click", (e) => {
-  selectToggle(e);
-});
-document.querySelector("#num0").addEventListener("click", (e) => {
-  selectToggle(e);
+document.querySelectorAll(".number").forEach((element) => {
+  element.addEventListener("click", (e) => {
+    selectToggle(e);
+  });
 });
 
 // 判斷AB

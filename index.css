@@ -68,19 +68,28 @@ body {
 .content > .icon {
   color: #555;
   font-size: 2rem;
+  transition: 0.5s;
 }
 .content > .icon:hover {
-  color: purple;
+  color: #fdc300;
 }
 .blankDiv {
   visibility: hidden;
 }
 .readmore {
   border-bottom: 0.5px solid #555;
+  transition: 0.5s;
+}
+.readmore:hover {
+  border-bottom: 0.5px solid #fdc300;
 }
 .readmore > a {
   text-decoration: none;
   color: #555;
+  transition: 0.5s;
+}
+.readmore > a:hover {
+  color: #fdc300;
 }
 
 @media (max-width: 540px) {
