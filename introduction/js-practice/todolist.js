@@ -67,25 +67,36 @@ const saveItem = (id) => {
 const display = () => {
   const displayTodolist = todos.map((value) => {
     let displayTodolistTmp = "";
-    displayTodolistTmp = value.edit
+    displayTodolistTmp = 
+    value.edit
       ? `<li>
-      <input id="editInput" type="text" value="${value.text}"/>
-      <button class="btn btn-primary saveBtn" id="${value.id}">save</button>
-      <button class="btn btn-primary completedBtn" id="${value.id}">completed</button>
-      <button class="btn btn-primary deleteBtn" id="${value.id}">delete</button>
-      </li>`
+          <div class="d-flex justify-content-center">
+            <input id="editInput" type="text" value="${value.text}"/>
+            <button class="btn btn-primary saveBtn" id="${value.id}">save</button>
+            <button class="btn btn-primary completedBtn" id="${value.id}">completed</button>
+            <button class="btn btn-primary deleteBtn" id="${value.id}">delete</button>
+          </div>
+        </li>`
       : value.completed
       ? `<li>
-      <del>${value.text}</del>
-      <button class="btn btn-primary editBtn" id="${value.id}">edit</button>
-      <button class="btn btn-primary completedBtn" id="${value.id}">completed</button>
-      <button class="btn btn-primary deleteBtn" id="${value.id}">delete</button>
-      </li>`
-      : `<li>${value.text}
-      <button class="btn btn-primary editBtn" id="${value.id}">edit</button>
-      <button class="btn btn-primary completedBtn" id="${value.id}">completed</button>
-      <button class="btn btn-primary deleteBtn" id="${value.id}">delete</button>
-      </li>`;
+          <div class="todoItem d-flex justify-content-between px-2">
+            <del>${value.text}</del>
+            <div>
+            <button class="btn btn-primary editBtn" id="${value.id}">edit</button>
+              <button class="btn btn-primary completedBtn" id="${value.id}">completed</button>
+              <button class="btn btn-primary deleteBtn" id="${value.id}">delete</button>
+            </div>
+          </div>
+        </li>`
+      : `<li>
+          <div class="todoItem d-flex justify-content-between px-2">${value.text}
+            <div>
+              <button class="btn btn-primary editBtn" id="${value.id}">edit</button>
+              <button class="btn btn-primary completedBtn" id="${value.id}">completed</button>
+             <button class="btn btn-primary deleteBtn" id="${value.id}">delete</button>
+            </div>
+          </div>
+        </li>`;
 
     return displayTodolistTmp;
   });

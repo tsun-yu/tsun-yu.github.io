@@ -1,3 +1,7 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 body {
   background-color: #eee;
 }
@@ -10,9 +14,30 @@ body {
   box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
-.buttonGroup {
+.inputArea {
   width: 100%;
   border-bottom: solid 0.5px #555;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#input,
+#send {
+  margin: 0 1rem;
+}
+.todoDisplay {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+li {
+  margin: 0.5rem 0;
+  box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.2);
+  min-height: 4rem;
+  background-color: rgb(250, 244, 155);
 }
 
 @media (max-width: 540px) {
