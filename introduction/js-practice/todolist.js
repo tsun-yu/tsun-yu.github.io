@@ -93,12 +93,12 @@ const display = () => {
   //以下為各按鈕事件
 
   //完成按鈕事件
-  document.querySelectorAll(".completedBtn").forEach((element) => {
-    element.addEventListener("click", (e) => {
-      completedToggle(e.target.id);
-      display();
+  const completedToggle = (id) => {
+    todos.forEach((v) => {
+      v.id == +id && (v.completed = !v.completed);
     });
-  });
+    localStorage.setItem("todos", JSON.stringify(todos));
+  };
 
   //刪除按鈕事件
   addEvent4Btns(".deleteBtn", "click", (e) => {
