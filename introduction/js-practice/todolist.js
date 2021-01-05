@@ -36,10 +36,12 @@ const addTodo = () => {
 };
 
 //切換是否已完成
-const completedToggle = (id) =>
+const completedToggle = (id) => {
   todos.forEach((v) => {
     v.id == +id && (v.completed = !v.completed);
   });
+  localStorage.setItem("todos", JSON.stringify(todos));
+};
 //刪除代辦事項
 const deleteItem = (id) => {
   todos = todos.filter((v) => v.id !== +id);
@@ -93,12 +95,12 @@ const display = () => {
   //以下為各按鈕事件
 
   //完成按鈕事件
-  const completedToggle = (id) => {
-    todos.forEach((v) => {
-      v.id == +id && (v.completed = !v.completed);
+  document.querySelectorAll(".completedBtn").forEach((element) => {
+    element.addEventListener("click", (e) => {
+      completedToggle(e.target.id);
+      display();
     });
-    localStorage.setItem("todos", JSON.stringify(todos));
-  };
+  });
 
   //刪除按鈕事件
   addEvent4Btns(".deleteBtn", "click", (e) => {
