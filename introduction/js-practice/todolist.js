@@ -78,6 +78,7 @@ const display = () => {
             <i class="fas fa-check" id="${value.id}"></i>
           </a>
           <input id="editInput" type="text" value="${value.text}"/>
+          <button class="btn btn-primary saveBtn" id="${value.id}">Done</button>
         </div>
       </li>`
       : value.completed
@@ -90,7 +91,7 @@ const display = () => {
         >
           <i class="fas fa-check" id="${value.id}"></i>
         </a>
-        <div class="todoItem"><del>${value.text}</del></div>
+        <div class="todoItem todoItemChecked"><del>${value.text}</del></div>
         <div class="editnDeleteBtns">
           <a href="##" class="editBtn" >
             <i class="fas fa-pen" id="${value.id}"></i>
@@ -132,14 +133,13 @@ const display = () => {
   //完成按鈕事件
   addEvent4Btns(".fa-check", "click", (e) => {
     completedToggle(e.target.id);
-    console.log(e.target,e.target.id)
     display();
   });
-  addEvent4Btns(".completedBtn", "click", (e) => {
-    completedToggle(e.target.id);
-    console.log(e.target,e.target.id)
-    display();
-  });
+  // addEvent4Btns(".completedBtn", "click", (e) => {
+  //   completedToggle(e.target.id);
+  //   console.log(e.target,e.target.id)
+  //   display();
+  // });
 
   //刪除按鈕事件
   addEvent4Btns(".fa-trash-alt", "click", (e) => {
@@ -150,7 +150,6 @@ const display = () => {
   //編輯按鈕事件
   addEvent4Btns(".fa-pen", "click", (e) => {
     const itemId = e.target.id;
-    console.log(e.target.id)
     editToggle(e.target.id);
     display();
     document.querySelector("#editInput").addEventListener("keypress", (e) => {
