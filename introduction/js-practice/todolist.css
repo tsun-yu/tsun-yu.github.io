@@ -2,8 +2,16 @@
   padding: 0;
   margin: 0;
 }
+a{
+  z-index: 10;
+}
+a:hover {
+  text-decoration: none;
+}
+
 body {
   background-color: #eee;
+  padding: 2rem;
 }
 .container {
   background-color: #fff;
@@ -18,26 +26,70 @@ body {
   width: 100%;
   border-bottom: solid 0.5px #555;
 }
-
-ul {
-  list-style-type: none;
-}
-
-#input,
-#send {
-  margin: 0 1rem;
-}
 .todoDisplay {
   margin-top: 1rem;
   width: 100%;
   padding: 0 1rem;
 }
-
+ul {
+  list-style-type: none;
+}
 li {
   margin: 0.5rem 0;
   box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.2);
   min-height: 4rem;
   background-color: rgb(250, 244, 155);
+}
+
+li > div {
+  width: 100%;
+}
+
+.completedBtn {
+  border: rgba(85, 85, 85, 0.212) solid 1px;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  transition: 0.5s;
+  flex-grow: 0;
+}
+
+.completedBtn:hover {
+  background-color: #fd7e14;
+  border: none;
+}
+.completedBtn:hover .fa-check {
+  color: rgb(250, 244, 155);
+}
+.fa-check,
+.fa-trash-alt,
+.fa-pen {
+  color: rgba(85, 85, 85, 0.212);
+  transition: 0.5s;
+}
+
+.editnDeleteBtns {
+  flex-grow: 0;
+}
+.todoItem {
+  flex-grow: 1;
+}
+.deleteBtn,
+.editBtn {
+  height: 4rem;
+  width: 2rem;
+  transition: 0.5s;
+}
+.deleteBtn:hover i {
+  color: #dc3545;
+}
+.editBtn:hover i {
+  color: #007bff;
+}
+
+#input,
+#send {
+  margin: 0 1rem;
 }
 
 @media (max-width: 540px) {

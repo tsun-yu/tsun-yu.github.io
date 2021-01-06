@@ -67,36 +67,60 @@ const saveItem = (id) => {
 const display = () => {
   const displayTodolist = todos.map((value) => {
     let displayTodolistTmp = "";
-    displayTodolistTmp = 
-    value.edit
-      ? `<li>
-          <div class="d-flex justify-content-center">
-            <input id="editInput" type="text" value="${value.text}"/>
-            <button class="btn btn-primary saveBtn" id="${value.id}">save</button>
-            <button class="btn btn-primary completedBtn" id="${value.id}">completed</button>
-            <button class="btn btn-primary deleteBtn" id="${value.id}">delete</button>
-          </div>
-        </li>`
+    displayTodolistTmp = value.edit
+      ? `<li class="d-flex">
+        <div class="d-flex align-items-center px-2">
+          <a
+            href="##"
+            class="completedBtn d-flex align-items-center justify-content-center"
+            id="${value.id}"
+          >
+            <i class="fas fa-check" id="${value.id}"></i>
+          </a>
+          <input id="editInput" type="text" value="${value.text}"/>
+        </div>
+      </li>`
       : value.completed
-      ? `<li>
-          <div class="todoItem d-flex justify-content-between px-2">
-            <del>${value.text}</del>
-            <div>
-            <button class="btn btn-primary editBtn" id="${value.id}">edit</button>
-              <button class="btn btn-primary completedBtn" id="${value.id}">completed</button>
-              <button class="btn btn-primary deleteBtn" id="${value.id}">delete</button>
-            </div>
-          </div>
-        </li>`
-      : `<li>
-          <div class="todoItem d-flex justify-content-between px-2">${value.text}
-            <div>
-              <button class="btn btn-primary editBtn" id="${value.id}">edit</button>
-              <button class="btn btn-primary completedBtn" id="${value.id}">completed</button>
-             <button class="btn btn-primary deleteBtn" id="${value.id}">delete</button>
-            </div>
-          </div>
-        </li>`;
+      ? `<li class="d-flex">
+      <div class="d-flex align-items-center px-2">
+        <a
+          href="##"
+          class="completedBtn d-flex align-items-center justify-content-center"
+          id="${value.id}"
+        >
+          <i class="fas fa-check" id="${value.id}"></i>
+        </a>
+        <div class="todoItem"><del>${value.text}</del></div>
+        <div class="editnDeleteBtns">
+          <a href="##" class="editBtn" >
+            <i class="fas fa-pen" id="${value.id}"></i>
+          </a>
+          <a href="##" class="deleteBtn" >
+            <i class="fas fa-trash-alt" id="${value.id}"></i>
+          </a>
+        </div>
+      </div>
+    </li>`
+      : `<li class="d-flex">
+      <div class="d-flex align-items-center px-2">
+        <a
+          href="##"
+          class="completedBtn d-flex align-items-center justify-content-center"
+          id="${value.id}"
+        >
+          <i class="fas fa-check" id="${value.id}"></i>
+        </a>
+        <div class="todoItem">${value.text}</div>
+        <div class="editnDeleteBtns">
+          <a href="##" class="editBtn" >
+            <i class="fas fa-pen" id="${value.id}"></i>
+          </a>
+          <a href="##" class="deleteBtn" >
+            <i class="fas fa-trash-alt " id="${value.id}"></i>
+          </a>
+        </div>
+      </div>
+    </li>`;
 
     return displayTodolistTmp;
   });
@@ -106,22 +130,27 @@ const display = () => {
   //以下為各按鈕事件
 
   //完成按鈕事件
-  document.querySelectorAll(".completedBtn").forEach((element) => {
-    element.addEventListener("click", (e) => {
-      completedToggle(e.target.id);
-      display();
-    });
+  addEvent4Btns(".fa-check", "click", (e) => {
+    completedToggle(e.target.id);
+    console.log(e.target,e.target.id)
+    display();
+  });
+  addEvent4Btns(".completedBtn", "click", (e) => {
+    completedToggle(e.target.id);
+    console.log(e.target,e.target.id)
+    display();
   });
 
   //刪除按鈕事件
-  addEvent4Btns(".deleteBtn", "click", (e) => {
+  addEvent4Btns(".fa-trash-alt", "click", (e) => {
     deleteItem(e.target.id);
     display();
   });
 
   //編輯按鈕事件
-  addEvent4Btns(".editBtn", "click", (e) => {
+  addEvent4Btns(".fa-pen", "click", (e) => {
     const itemId = e.target.id;
+    console.log(e.target.id)
     editToggle(e.target.id);
     display();
     document.querySelector("#editInput").addEventListener("keypress", (e) => {
