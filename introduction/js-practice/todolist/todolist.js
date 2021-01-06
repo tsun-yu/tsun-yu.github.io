@@ -71,7 +71,6 @@ const display = () => {
       ? `<li class="d-flex">
         <div class="d-flex align-items-center px-2">
           <a
-            
             class="completedBtn d-flex align-items-center justify-content-center"
             id="${value.id}"
           >

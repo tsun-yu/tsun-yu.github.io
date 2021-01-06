@@ -26,7 +26,7 @@ body {
   width: 100%;
   border-bottom: solid 0.5px #555;
 }
-.inputArea input{
+.inputArea input {
   flex-grow: 1;
 }
 .todoDisplay {
@@ -56,7 +56,6 @@ li > div {
   transition: 0.5s;
   flex-grow: 0;
 }
-
 
 .completedBtn:hover {
   background-color: #fd7e14;
@@ -100,10 +99,10 @@ li > div {
   margin: 0 1rem;
 }
 
-#editInput{
+#editInput {
   flex-grow: 1;
 }
-.saveBtn{
+.saveBtn {
   flex-grow: 0;
   margin-left: 1rem;
 }
@@ -113,5 +112,19 @@ li > div {
     width: 90vw;
     height: 90vh;
     min-height: 30rem;
+  }
+  a {
+    margin-right: 0rem;
+  }
+  .saveBtn {
+    font-size: 0.5rem;
+    padding: 0.125rem;
+    width: 2.5rem;
+    height: 2rem;
+    margin: 0;
+  }
+  .completedBtn {
+    width: 2rem;
+    height: 2rem;
   }
 }
