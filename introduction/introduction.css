@@ -31,6 +31,9 @@ hr {
   background-position: center;
   height: 100vh;
 }
+.page2{
+  height: 200vh;
+}
 .homepage {
   height: 100vh;
   background-image: url(./images/nyc.jpg);
@@ -189,19 +192,24 @@ hr {
 }
 .page2 > div {
   background-color: rgba(0, 0, 0, 0.2);
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
 }
 .page2 > div > div {
   padding: 5vh 10%;
 }
+
+.works {
+  flex-wrap: wrap;
+}
 .works > div {
   width: 50%;
 }
 
-.works .d-flex {
+.works>.d-flex {
   flex-direction: column;
   align-items: center;
+  margin: 1rem 0;
 }
 .workTitle {
   font-size: 2rem;
@@ -225,6 +233,7 @@ hr {
 }
 .contact {
   height: 60vh;
+  min-height: 500px;
   padding: 5vh 10%;
   background-color: #eee;
 }
@@ -330,9 +339,7 @@ i:hover {
   .mobileDate {
     flex-direction: column;
   }
-  .works {
-    flex-wrap: wrap;
-  }
+  
   .works > div {
     width: 100%;
     margin-bottom: 1rem;
@@ -345,6 +352,6 @@ i:hover {
   }
   .page2,
   .page2 > div {
-    height: 200vh;
+    height: 250vh;
   }
 }
