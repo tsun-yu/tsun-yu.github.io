@@ -11,13 +11,13 @@ a:hover {
 
 body {
   background-color: #eee;
-  padding-top: 1rem;
+  padding: 1rem;
 }
 .container {
   background-color: #fff;
   border-radius: 20px;
   width: 31.25rem;
-  height: 31.25rem;
+  min-height: 31.25rem;
   padding: 1.25rem;
   box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.2);
 }
