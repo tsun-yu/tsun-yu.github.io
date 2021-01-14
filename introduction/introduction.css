@@ -20,10 +20,25 @@ hr {
 }
 .navbar {
   width: 100vw;
-  height: 10vh;
-  background-color: rgba(0, 0, 0, 0.85);
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.705);
   position: fixed;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  z-index: 2;
+  justify-content: space-between;
 }
+.websiteTitle {
+  color: #eee;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.linkgroup > div {
+  margin: 0 1rem;
+  color: #ccc;
+}
+
 .homepage,
 .page1,
 .page2 {
@@ -31,7 +46,7 @@ hr {
   background-position: center;
   height: 100vh;
 }
-.page2{
+.page2 {
   height: 200vh;
 }
 .homepage {
@@ -135,7 +150,7 @@ hr {
   color: #fff;
   font-size: 1.25rem;
 }
-.linkTo {
+/* .linkTo {
   margin: 2rem;
 }
 .linkTo a {
@@ -145,7 +160,7 @@ hr {
   color: #fff;
   font-size: 2rem;
   transition: 0.5s;
-}
+} */
 .linkTo i:hover {
   color: #fda400;
 }
@@ -206,7 +221,7 @@ hr {
   width: 50%;
 }
 
-.works>.d-flex {
+.works > .d-flex {
   flex-direction: column;
   align-items: center;
   margin: 1rem 0;
@@ -339,7 +354,7 @@ i:hover {
   .mobileDate {
     flex-direction: column;
   }
-  
+
   .works > div {
     width: 100%;
     margin-bottom: 1rem;
