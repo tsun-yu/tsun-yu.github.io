@@ -137,8 +137,13 @@ const calc = (id, arr) => {
             isPlayer = false;
             playerDone = true;
             slr(id).innerHTML = `<div class="alert alert-danger" role="alert">
-            !</div>`;
+            BUST !!</div>`;
           } else {
+            slr(
+              "#result"
+            ).innerHTML = `<div class="alert alert-success" role="alert">
+            YOU WIN !!
+          </div>`;
             slr(id).innerHTML = "bust";
           }
         }
@@ -153,6 +158,11 @@ const calc = (id, arr) => {
         BUST !</div>`;
       } else {
         slr(id).innerHTML = "bust";
+        slr(
+          "#result"
+        ).innerHTML = `<div class="alert alert-success" role="alert">
+        YOU WIN !!
+      </div>`;
       }
     }
   } else {
@@ -160,6 +170,13 @@ const calc = (id, arr) => {
     isPlayer ? (playerTotal = total) : (bankTotal = total);
   }
   flag < 3 && (isPlayer = !isPlayer);
+  if (cardsPlayer.length == 5 && playerTotal <= 21) {
+    slr(
+      "#result"
+    ).innerHTML = `<div class="alert alert-success" role="alert">YOU WIN !!</div>`;
+    disabled("#deal");
+    disabled("#done");
+  }
 };
 
 // const card = createCard("c", 11);
@@ -209,6 +226,7 @@ slr("#restart").addEventListener("click", () => {
   slr("#bankCards").innerHTML = ``;
   slr("#playerTotal").innerHTML = ``;
   slr("#playerCards").innerHTML = ``;
+  slr("#result").innerHTML = ``;
   cardsPool = [...shuffle(cardsPool)];
   cardsPlayer = [];
   cardsBank = [];
@@ -228,7 +246,7 @@ slr("#done").addEventListener("click", () => {
 });
 
 const bankAuto = () => {
-  while (bankTotal < 21) {
+  while (bankTotal <= 21) {
     if (bankTotal < playerTotal) {
       if (slr("#bankTotal").innerHTML == "bust") {
         break;
@@ -237,6 +255,13 @@ const bankAuto = () => {
         calc("#bankTotal", cardsBank);
       }
     } else {
+      bankTotal == playerTotal
+        ? (slr(
+            "#result"
+          ).innerHTML = `<div class="alert alert-secondary" role="alert"> EVEN </div>`)
+        : (slr(
+            "#result"
+          ).innerHTML = `<div class="alert alert-danger" role="alert">YOU LOSE !</div>`);
       break;
     }
   }
