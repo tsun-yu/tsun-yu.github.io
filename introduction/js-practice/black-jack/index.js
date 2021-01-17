@@ -53,17 +53,19 @@ const createCard = (suit, point) => {
 };
 
 const slr = (name) => document.querySelector(name);
+const disabled = (id) => slr(id).setAttribute("disabled", "");
+const abled = (id) => slr(id).removeAttribute("disabled", "");
 
-let cardsPool = [];
-let cardsPlayer = [];
-let cardsBank = [];
-let flag = 0;
-let aceNumPlayer = 0;
-let aceNumBank = 0;
-let isPlayer = true;
-let playerDone = false;
-let playerTotal = 0;
-let bankTotal = 0;
+let cardsPool = [],
+  cardsPlayer = [],
+  cardsBank = [],
+  flag = 0,
+  aceNumPlayer = 0,
+  aceNumBank = 0,
+  playerTotal = 0,
+  bankTotal = 0,
+  isPlayer = true,
+  playerDone = false;
 
 //產生一副牌函式
 const initCards = () => {
@@ -129,18 +131,28 @@ const calc = (id, arr) => {
           isPlayer ? (playerTotal = total) : (bankTotal = total);
           break;
         } else {
-          slr(id).innerHTML = "bust";
           if (isPlayer) {
+            disabled("#deal");
+            disabled("#done");
             isPlayer = false;
             playerDone = true;
+            slr(id).innerHTML = `<div class="alert alert-danger" role="alert">
+            !</div>`;
+          } else {
+            slr(id).innerHTML = "bust";
           }
         }
       }
     } else {
-      slr(id).innerHTML = "bust";
       if (isPlayer) {
+        disabled("#deal");
+        disabled("#done");
         isPlayer = false;
         playerDone = true;
+        slr(id).innerHTML = `<div class="alert alert-danger" role="alert">
+        BUST !</div>`;
+      } else {
+        slr(id).innerHTML = "bust";
       }
     }
   } else {
@@ -161,8 +173,8 @@ cardsPool = [...shuffle(cardsPool)];
 
 //新遊戲
 const newGame = () => {
-  slr("#deal").setAttribute("disabled", "");
-  slr("#done").setAttribute("disabled", "");
+  disabled("#deal");
+  disabled("#done");
   setTimeout(() => {
     deal();
     calc("#playerTotal", cardsPlayer);
@@ -174,9 +186,9 @@ const newGame = () => {
   setTimeout(() => {
     deal();
     calc("#playerTotal", cardsPlayer);
-    slr("#deal").removeAttribute("disabled", "");
-    slr("#restart").removeAttribute("disabled", "");
-    slr("#done").removeAttribute("disabled", "");
+    abled("#deal");
+    abled("#restart");
+    abled("#done");
   }, 1500);
 };
 //開始按鈕事件
@@ -208,8 +220,8 @@ slr("#restart").addEventListener("click", () => {
 });
 
 slr("#done").addEventListener("click", () => {
-  slr("#done").setAttribute("disabled", "");
-  slr("#deal").setAttribute("disabled", "");
+  disabled("#done");
+  disabled("#deal");
   playerDone = !playerDone;
   isPlayer = false;
   bankAuto();
