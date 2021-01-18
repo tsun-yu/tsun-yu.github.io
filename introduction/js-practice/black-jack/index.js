@@ -192,8 +192,6 @@ cardsPool = [...shuffle(cardsPool)];
 
 //新遊戲
 const newGame = () => {
-  disabled("#deal");
-  disabled("#done");
   let time = 500;
   while (time < 2000) {
     setTimeout(() => {
@@ -204,9 +202,13 @@ const newGame = () => {
     }, time);
     time += 500;
   }
-  abled("#deal");
-  abled("#restart");
-  abled("#done");
+  disabled("#deal");
+  disabled("#done");
+  setTimeout(() => {
+    abled("#deal");
+    abled("#restart");
+    abled("#done");
+  }, 1550);
 };
 
 //莊家拿牌
