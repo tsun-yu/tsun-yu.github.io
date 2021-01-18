@@ -134,6 +134,7 @@ const calc = (id, arr) => {
           if (isPlayer) {
             disabled("#deal");
             disabled("#done");
+            playerTotal = total;
             isPlayer = false;
             playerDone = true;
             slr(id).innerHTML = `<div class="alert alert-danger" role="alert">
@@ -152,6 +153,7 @@ const calc = (id, arr) => {
       if (isPlayer) {
         disabled("#deal");
         disabled("#done");
+        playerTotal = total;
         isPlayer = false;
         playerDone = true;
         slr(id).innerHTML = `<div class="alert alert-danger" role="alert">
@@ -192,22 +194,44 @@ cardsPool = [...shuffle(cardsPool)];
 const newGame = () => {
   disabled("#deal");
   disabled("#done");
-  setTimeout(() => {
-    deal();
-    calc("#playerTotal", cardsPlayer);
-  }, 500);
-  setTimeout(() => {
-    deal();
-    calc("#bankTotal", cardsBank);
-  }, 1000);
-  setTimeout(() => {
-    deal();
-    calc("#playerTotal", cardsPlayer);
-    abled("#deal");
-    abled("#restart");
-    abled("#done");
-  }, 1500);
+  let time = 500;
+  while (time < 2000) {
+    setTimeout(() => {
+      deal();
+      isPlayer
+        ? calc("#playerTotal", cardsPlayer)
+        : calc("#bankTotal", cardsBank);
+    }, time);
+    time += 500;
+  }
+  abled("#deal");
+  abled("#restart");
+  abled("#done");
 };
+
+//莊家拿牌
+const bankAuto = () => {
+  while (bankTotal <= 21) {
+    if (bankTotal < playerTotal) {
+      if (slr("#bankTotal").innerHTML == "bust") {
+        break;
+      } else {
+        deal();
+        calc("#bankTotal", cardsBank);
+      }
+    } else {
+      bankTotal == playerTotal
+        ? (slr(
+            "#result"
+          ).innerHTML = `<div class="alert alert-secondary" role="alert"> EVEN </div>`)
+        : (slr(
+            "#result"
+          ).innerHTML = `<div class="alert alert-danger" role="alert">YOU LOSE !</div>`);
+      break;
+    }
+  }
+};
+
 //開始按鈕事件
 slr("#start").addEventListener("click", function () {
   newGame();
@@ -237,6 +261,7 @@ slr("#restart").addEventListener("click", () => {
   newGame();
 });
 
+//結束按鈕事件
 slr("#done").addEventListener("click", () => {
   disabled("#done");
   disabled("#deal");
@@ -244,25 +269,3 @@ slr("#done").addEventListener("click", () => {
   isPlayer = false;
   bankAuto();
 });
-
-const bankAuto = () => {
-  while (bankTotal <= 21) {
-    if (bankTotal < playerTotal) {
-      if (slr("#bankTotal").innerHTML == "bust") {
-        break;
-      } else {
-        deal();
-        calc("#bankTotal", cardsBank);
-      }
-    } else {
-      bankTotal == playerTotal
-        ? (slr(
-            "#result"
-          ).innerHTML = `<div class="alert alert-secondary" role="alert"> EVEN </div>`)
-        : (slr(
-            "#result"
-          ).innerHTML = `<div class="alert alert-danger" role="alert">YOU LOSE !</div>`);
-      break;
-    }
-  }
-};
