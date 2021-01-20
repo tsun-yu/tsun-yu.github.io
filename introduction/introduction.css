@@ -248,10 +248,11 @@ hr {
   width: 95%;
   height: 60vh;
   text-align: center;
+  overflow:scroll;
 }
 .myworkImg,
 .myworkImg2 {
-  height: 100%;
+  width: 100%;
 }
 .contact {
   height: 60vh;
@@ -330,14 +331,21 @@ i:hover {
     max-height: 400px;
     padding: 10%;
   }
-  .aboutContent > div {
-    font-size: 1rem;
-  }
-  .aboutContent > div:nth-child(1) {
+  .aboutContent > p:nth-child(1) {
     font-size: 1.25rem;
   }
+
+  .aboutContent>p{
+    margin: 1rem 0;
+  }
+
+  .introduction {
+    font-size: 1rem;
+    padding: 0;
+
+  }
   .skill {
-    height: 150vh;
+    height: 175vh;
     min-height: 700px;
   }
 
@@ -354,6 +362,7 @@ i:hover {
   .skillSection > .d-flex {
     font-size: 1.125rem;
   }
+
   .title {
     font-size: 1rem;
     font-weight: 500;
