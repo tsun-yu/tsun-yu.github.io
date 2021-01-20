@@ -4,6 +4,7 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: #555;
+  box-sizing: content-box;
 }
 a {
   text-decoration: none;
@@ -18,12 +19,13 @@ hr {
 .d-flex {
   display: flex;
 }
+
 .navbar {
   width: 100vw;
   height: 2rem;
   background-color: rgba(0, 0, 0, 0.705);
   position: fixed;
-  padding: 0.5rem 1rem;
+  padding: 10px;
   align-items: center;
   z-index: 2;
   justify-content: space-between;
@@ -34,6 +36,7 @@ hr {
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
 }
+
 .linkgroup > div {
   margin: 0 1rem;
   color: #ccc;
@@ -146,9 +149,17 @@ hr {
 .aboutContent {
   text-align: center;
 }
-.aboutContent > div {
+.aboutContent > p {
   color: #fff;
+  margin: 2rem;
+}
+.aboutContent > p:nth-child(1) {
+  font-size: 1.5rem;
+}
+
+.introduction {
   font-size: 1.25rem;
+  padding: 0 6rem;
 }
 /* .linkTo {
   margin: 2rem;
@@ -161,14 +172,10 @@ hr {
   font-size: 2rem;
   transition: 0.5s;
 } */
-.linkTo i:hover {
+/* .linkTo i:hover {
   color: #fda400;
-}
+} */
 
-.aboutContent > div:nth-child(1) {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
 .skill {
   background-color: #eee;
   height: 50vh;

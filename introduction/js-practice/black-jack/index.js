@@ -214,10 +214,11 @@ const newGame = () => {
 //莊家拿牌
 const bankAuto = () => {
   while (bankTotal <= 21) {
-    if (bankTotal < playerTotal) {
+    if (bankTotal < playerTotal || bankTotal < 17) {
       if (slr("#bankTotal").innerHTML == "bust") {
         break;
       } else {
+        console.log("11111");
         deal();
         calc("#bankTotal", cardsBank);
       }
