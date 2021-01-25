@@ -132,9 +132,11 @@ hr {
   color: rgb(29, 29, 29);
 }
 .boxContent {
+  font-family: 'Noto Sans TC', sans-serif;
   color: rgb(39, 39, 39);
 }
 .title {
+  font-family: 'Noto Sans TC', sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
 }
