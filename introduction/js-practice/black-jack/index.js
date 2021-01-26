@@ -124,13 +124,14 @@ const calc = (id, arr) => {
 
   if (total > 21) {
     if (aceNumTmp != 0) {
+      //點數>21但有A
       for (let i = 0; i < aceNumTmp; i++) {
         total -= 10;
         if (total <= 21) {
           slr(id).innerHTML = total;
           isPlayer ? (playerTotal = total) : (bankTotal = total);
           break;
-        } else {
+        } else if (i == aceNumTmp - 1) {
           if (isPlayer) {
             disabled("#deal");
             disabled("#done");
@@ -138,18 +139,19 @@ const calc = (id, arr) => {
             isPlayer = false;
             playerDone = true;
             slr(id).innerHTML = `<div class="alert alert-danger" role="alert">
-            BUST !!</div>`;
+              BUST !!</div>`;
           } else {
             slr(
               "#result"
             ).innerHTML = `<div class="alert alert-success" role="alert">
-            YOU WIN !!
-          </div>`;
+              YOU WIN !!
+            </div>`;
             slr(id).innerHTML = "bust";
           }
         }
       }
     } else {
+      //點數>21 但沒有A
       if (isPlayer) {
         disabled("#deal");
         disabled("#done");
@@ -162,16 +164,16 @@ const calc = (id, arr) => {
         slr(id).innerHTML = "bust";
         slr(
           "#result"
-        ).innerHTML = `<div class="alert alert-success" role="alert">
-        YOU WIN !!
-      </div>`;
+        ).innerHTML = `<div class="alert alert-success" role="alert">YOU WIN !!</div>`;
       }
     }
   } else {
+    //點數<21
     slr(id).innerHTML = total;
     isPlayer ? (playerTotal = total) : (bankTotal = total);
   }
   flag < 3 && (isPlayer = !isPlayer);
+  //過五關
   if (cardsPlayer.length == 5 && playerTotal <= 21) {
     slr(
       "#result"
@@ -218,7 +220,6 @@ const bankAuto = () => {
       if (slr("#bankTotal").innerHTML == "bust") {
         break;
       } else {
-        console.log("11111");
         deal();
         calc("#bankTotal", cardsBank);
       }
@@ -254,6 +255,8 @@ slr("#restart").addEventListener("click", () => {
   slr("#playerTotal").innerHTML = ``;
   slr("#playerCards").innerHTML = ``;
   slr("#result").innerHTML = ``;
+  cardsPool.length = 0;
+  initCards();
   cardsPool = [...shuffle(cardsPool)];
   cardsPlayer = [];
   cardsBank = [];
