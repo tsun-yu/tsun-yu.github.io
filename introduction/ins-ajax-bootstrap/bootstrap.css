@@ -1,0 +1,252 @@
+.flex {
+  display: flex;
+}
+.topline {
+  padding: 13px 0 15px 0;
+  border-bottom: black 1px solid;
+}
+
+.topline div {
+  border-left: solid black 0.5px;
+  padding: 0 10px 0 10px;
+  font-size: 12px;
+}
+.menu {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.795);
+}
+.option {
+  padding-left: 0;
+  color: rgb(128, 123, 123);
+}
+.navbar-nav .dropdown a {
+  color: #1a1a1a !important ;
+}
+
+.navbar-nav span {
+  color: #1a1a1a !important ;
+}
+nav .dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.boxinfo {
+  margin-bottom: 30px;
+}
+.boxinfoitem {
+  background-color: #000;
+  border: 1px white solid;
+}
+
+.boxinfoitem h3 {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.boxinfoitem p {
+  font-size: 12px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.icon {
+  margin: 20px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 30%;
+  font-size: 38px;
+  font-weight: 700;
+}
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.banner div {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+.banner div h2 {
+  font-size: 80px;
+  font-weight: 900;
+}
+.banner div h4 {
+  font-size: 32px;
+  font-weight: 400;
+}
+.banner div p {
+  margin: 20px 0 0 0;
+}
+
+.box {
+  height: 60px;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.slide .flex p {
+  text-decoration: underline;
+}
+
+.discount {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 10px;
+}
+
+.sale {
+  margin: 20px;
+}
+
+.banner1 {
+  position: relative;
+}
+
+.banner1 img {
+  width: 100%;
+}
+
+.banner1 div {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  bottom: 10%;
+  left: 10%;
+}
+.banner1 div h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+.banner1 div h3 {
+  font-size: 14px;
+  font-weight: 400;
+  font-weight: 700 !important;
+}
+.banner1 div h4 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.nigga {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-image: url(./umlimit/unParallax-1400x1110.jpg);
+  background-attachment: fixed;
+}
+.nigga h2 {
+  font-size: 128px;
+  line-height: 1em;
+  color: #fff;
+  font-weight: 900;
+  font-family: inherit;
+}
+.nigga h3 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 0.9em;
+  color: #fff;
+  font-family: inherit;
+}
+
+.footer {
+  background-color: #222;
+}
+
+.footer .container {
+  padding: 78px 0 55px 0;
+}
+
+.information {
+  margin-bottom: 40px;
+  color: white;
+  font-weight: 600;
+}
+
+.footerinfo {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footerinfo a {
+  color: white;
+}
+.email {
+  font-size: 10px;
+}
+
+.blank {
+  width: 40px;
+}
+.footer2 {
+  background-color: #1a1a1a;
+  /* padding: 20px 0 6px 0; */
+  height: 10vh;
+}
+.payment {
+  padding: 20px;
+}
+
+/* icons圖示 */
+/* 搜尋 */
+.lnr {
+  display: inline-block;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.05em;
+}
+
+.lnr-magnifier {
+  color: #555;
+  font-size: 25px;
+}
+
+/* 購物車 */
+.lnr-cart {
+  color: #555;
+  font-size: 24px;
+}
+/* 運費 */
+.lnr-rocket {
+  color: #fff;
+  font-size: 40px;
+}
+
+/* 退貨 */
+.lnr-book {
+  color: #fff;
+  font-size: 40px;
+}
+
+/* 客服 */
+.lnr-phone-handset {
+  color: #fff;
+  font-size: 40px;
+}
+/* 信封 */
+.lnr-envelope {
+  color: #000;
+  font-size: 15px;
+}
+
+.fb {
+  font-size: 40px;
+}
