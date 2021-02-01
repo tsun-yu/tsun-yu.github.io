@@ -211,6 +211,7 @@ hr {
   width: 100vw;
   padding: 5% 10% 0 10%;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 .works {
