@@ -29,7 +29,7 @@ body {
   top: 0;
   width: 25rem;
   height: 12.5rem;
-  background-image: url(./introduction/images/nyc.jpg);
+  background-image: url(./images/nyc.jpg);
   background-position: center;
   background-size: cover;
   opacity: 0.7;
@@ -39,7 +39,7 @@ body {
   width: 12.5rem;
   height: 12.5rem;
   margin-top: 6.25rem;
-  background-image: url(./introduction/images/IMG_0775.jpg);
+  background-image: url(./images/IMG_0775.jpg);
   background-size: cover;
   background-position: center;
   z-index: 1;

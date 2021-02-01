@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>black jack</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="col">
+        <div class="btn-groups">
+          <button id="start" class="btn btn-primary">Start</button>
+          <button id="deal" class="btn btn-primary" disabled>Deal</button>
+          <button id="done" class="btn btn-primary" disabled>Done</button>
+          <button id="restart" class="btn btn-secondary" disabled>
+            Restart
+          </button>
+        </div>
+        <div id="player">
+          <div id="result"></div>
+          <div id="playerTotal"></div>
+          <h1 id="playerCards"></h1>
+        </div>
+        <hr />
+        <div id="bank">
+          <div id="bankTotal"></div>
+          <h1 id="bankCards"></h1>
+        </div>
+      </div>
+    </div>
+    <script src="poker.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

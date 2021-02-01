@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction</title>
+    <title>WAYNE</title>
     <link rel="stylesheet" href="../css/all.css" />
     <link
       rel="stylesheet"
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./introduction.css" />
   </head>
   <body>
-    <div class="navbar d-flex">
+    <!-- <div class="navbar d-flex">
       <div class="websiteTitle">WAYNE</div>
       <div class="linkgroup d-flex">
         <div>ABOUT</div>
@@ -25,19 +25,19 @@
         <div>SKILLS</div>
         <div>PORTFOLIOS</div>
       </div>
-    </div>
+    </div> -->
     <div class="homepage">
       <div class="d-flex">
-        <div class="hpTitle animate__animated animate__flipInX">
-          It's all about
-        </div>
-        <div class="hpTitle animate__animated animate__flipInX">
-          WAYNE HUANG
-        </div>
+        <span class="hpTitle animate__animated animate__flipInX"
+          >It's all about</span
+        >
+        <span class="hpTitle animate__animated animate__flipInX"
+          >WAYNE HUANG</span
+        >
         <hr />
-        <div class="smallword animate__animated animate__flipInY">
-          <div>Welcome To My Website</div>
-          <div>Skills | Experience | Works</div>
+        <div class="smallword animate__animated animate__flipInY d-flex">
+          <span>Welcome To My Website</span>
+          <span>Skills | Experience | Works</span>
         </div>
       </div>
     </div>
@@ -45,9 +45,9 @@
       <div class="topic">ABOUT ME</div>
       <hr />
       <div class="aboutContent">
-        <p>
+        <h1>
           【從共同創辦人到業務轉成為前端工程師，在快速變動的環境裡，持續學習、面對挑戰】
-        </p>
+        </h1>
         <!-- <br> -->
         <p class="introduction">
           我是黃尊昱，曾為lalalocker共享經濟平台共同創辦人，之後雖回歸國貿系相關領域業務，
@@ -55,154 +55,155 @@
           但仍認為在這個屬於網路的時代，前端佔著舉足輕重的地位，即便在成為工程師的路途上充滿困難及挑戰，<br />
           依然不畏懼的面對迎來的重重難關，不斷增強自己
         </p>
-        <!-- <div class="linkTo">
-          <a href="https://www.linkedin.com/in/tsun-yu-wayne-huang-020268163/">
-            <i class="fab fa-linkedin"></i></a
-          ><a href="https://github.com/tsun-yu"
-            ><i class="fab fa-github-square"></i>
-          </a>
-        </div> -->
       </div>
     </div>
     <div class="skill">
       <div class="topic">SKILLS</div>
       <hr />
       <div class="d-flex">
-        <div class="d-flex skillSection">
-          <div>英語技能</div>
+        <div class="skillSection">
+          <h2>英語技能</h2>
           <div class="skillsItems d-flex">多益成績:810</div>
         </div>
-        <div class="d-flex skillSection">
-          <div>前端語言</div>
+        <div class="skillSection">
+          <h2>HTML & CSS</h2>
           <div class="d-flex">
-            <div class="skillsItems"><i class="fab fa-html5"></i> HTML</div>
-            <div class="skillsItems">
-              <i class="fab fa-css3-alt"></i> CSS (RWD)
-            </div>
-            <div class="skillsItems"><i class="fab fa-js"></i> JavaScript</div>
-          </div>
-        </div>
-        <div class="d-flex skillSection">
-          <div>前端框架&函式庫</div>
-          <div class="d-flex">
-            <div class="skillsItems"><i class="fab fa-react"></i> React</div>
+            <div class="skillsItems"><i class="fab fa-html5"></i> HTML5</div>
+            <div class="skillsItems"><i class="fab fa-css3-alt"></i> CSS3</div>
             <div class="skillsItems">
               <i class="fab fa-bootstrap"></i> Bootstrap
             </div>
+            <div class="skillsItems"><i class="fab fa-sass"></i> Scss</div>
+            <div class="skillsItems">RWD 切版</div>
+          </div>
+        </div>
+        <div class="skillSection">
+          <h2>JavaScript</h2>
+          <div class="d-flex">
+            <div class="skillsItems"><i class="fab fa-js"></i> JavaScript</div>
             <div class="skillsItems">
               <i class="fab fa-js" style="visibility: hidden"></i>jQuery
             </div>
+            <div class="skillsItems"><i class="fab fa-react"></i> React</div>
+            <div class="skillsItems">XHR / AJAX / Fetch</div>
+            <div class="skillsItems">callback / Promise / Async</div>
           </div>
         </div>
-        <div class="d-flex skillSection">
-          <div>Others</div>
+        <div class="skillSection">
+          <h2>Others</h2>
           <div class="d-flex">
-            <div class="skillsItems">NPM, yarn 指令</div>
-            <div class="skillsItems">Git 指令</div>
-            <div class="skillsItems">Babel 自動打包編譯</div>
-            <div class="skillsItems">Postman, JSON Server測試</div>
+            <div class="skillsItems">
+              <i class="fab fa-npm"></i> NPM,<i class="fab fa-yarn"></i> yarn
+              指令
+            </div>
+            <div class="skillsItems">
+              <i class="fab fa-git-alt"></i> Git 指令
+            </div>
+            <div class="skillsItems">
+              <i class="fas fa-code-branch"></i> Git Flow and Branch
+            </div>
+            <div class="skillsItems">Postman, JSON Server 測試 RESTful API</div>
+            <div class="skillsItems"><i class="fab fa-python"></i> Python</div>
           </div>
         </div>
       </div>
     </div>
     <div class="page1">
-      <div>
-        <div class="d-flex">
-          <div class="topic">EXPERIENCE</div>
-          <hr />
-          <div class="experience">
-            <!-- 學歷 -->
-            <div class="box">
-              <div>學歷</div>
-              <div class="d-flex">
-                <div class="d-flex mobileDate">
-                  <div class="title">東吳大學 國際貿易學系</div>
-                  <div>2013.9 - 2017.6</div>
-                </div>
-                <div class="d-flex mobileDate">
-                  <div>Soochow University</div>
-                  <div>Taipei, Taiwan</div>
-                </div>
-                <div class="boxContent">
-                  - 選修個體經濟學、總體經濟學、智慧財產權法、餐旅管理等 <br />
-                  - 旁聽國貿研究所電子商務課程 <br />
-                  - 課外活動：系男籃、拳擊社、舉辦迎新宿營
-                </div>
+      <div class="d-flex">
+        <div class="topic">EXPERIENCE</div>
+        <hr />
+        <div class="experience">
+          <!-- 學歷 -->
+          <div class="box">
+            <div>學歷</div>
+            <div class="d-flex">
+              <div class="d-flex mobileDate">
+                <span class="title">東吳大學 國際貿易學系</span>
+                <span>2013.9 - 2017.6</span>
+              </div>
+              <div class="d-flex mobileDate">
+                <span>Soochow University</span>
+                <span>Taipei, Taiwan</span>
+              </div>
+              <div class="boxContent">
+                - 選修個體經濟學、總體經濟學、智慧財產權法、餐旅管理等 <br />
+                - 旁聽國貿研究所電子商務課程 <br />
+                - 課外活動：系男籃、拳擊社、舉辦迎新宿營
               </div>
             </div>
-            <!-- 訓練經歷 -->
-            <div class="box">
-              <div>訓練經歷</div>
-              <div class="d-flex">
-                <div class="d-flex mobileDate">
-                  <div class="title">資策會 前端工程師就業養成班</div>
-                  <div>2020.7 - 2020.11</div>
-                </div>
-                <div class="d-flex mobileDate">
-                  <div>Institute for Information Industry</div>
-                  <div>Taipei, Taiwan</div>
-                </div>
-                <div class="boxContent">
-                  -
-                  React專題：前端使用React以及Bootstrap,後端使用nodejs，個人主要負責首頁的功能實現及視覺呈現，以及全組的整合
-                </div>
+          </div>
+          <!-- 訓練經歷 -->
+          <div class="box">
+            <div>訓練經歷</div>
+            <div class="d-flex">
+              <div class="d-flex mobileDate">
+                <span class="title">資策會 前端工程師就業養成班</span>
+                <span>2020.7 - 2020.11</span>
+              </div>
+              <div class="d-flex mobileDate">
+                <span>Institute for Information Industry</span>
+                <span>Taipei, Taiwan</span>
+              </div>
+              <div class="boxContent">
+                -
+                React專題：前端使用React以及Bootstrap,後端使用nodejs，個人主要負責首頁的功能實現及視覺呈現，以及全組的整合
               </div>
             </div>
-            <!-- 八達工作經驗 -->
-            <div class="box">
-              <div>工作經歷</div>
-              <div class="d-flex">
-                <div class="d-flex">
-                  <div class="title">海空運業務</div>
-                  <div>2018.6 - 2020.2</div>
-                </div>
-                <div class="d-flex">
-                  <div>八達國際物流</div>
-                  <div>Taipei, Taiwan</div>
-                </div>
-                <div class="boxContent">
-                  - 海空運報價：年業績創造利潤百萬 <br />
-                  負責海空運報價、解答運輸上的問題、維護與客戶關係、居中協調客人及船公司，需了解海空運運輸知識、進出口文件、了解進口報關規範
-                </div>
+          </div>
+          <!-- 八達工作經驗 -->
+          <div class="box">
+            <div>工作經歷</div>
+            <div class="d-flex">
+              <div class="d-flex mobileDate">
+                <span class="title">海空運業務</span>
+                <span>2018.6 - 2020.2</span>
+              </div>
+              <div class="d-flex mobileDate">
+                <span>八達國際物流</span>
+                <span>Taipei, Taiwan</span>
+              </div>
+              <div class="boxContent">
+                - 海空運報價：年業績創造利潤百萬 <br />
+                負責海空運報價、解答運輸上的問題、維護與客戶關係、居中協調客人及船公司，需了解海空運運輸知識、進出口文件、了解進口報關規範
               </div>
             </div>
-            <!-- lalalocker工作經驗 -->
-            <div class="box">
-              <div>工作經歷</div>
-              <div class="d-flex">
-                <div class="d-flex">
-                  <div class="title">共同創辦人</div>
-                  <div>2017.9 - 2018.3</div>
-                </div>
-                <div class="d-flex">
-                  <div>Lalalocker</div>
-                  <div>Taipei, Taiwan</div>
-                </div>
-                <div class="boxContent">
-                  - 利用自己搭建的網路平台媒合店家的彈性空間成為旅客的寄物點
-                  <br />
-                  - 合作陌生店家開發：三個月20+合作店家 <br />
-                  遍及全台，包括台北捷運站(市府、國父紀念館等)、觀光區(瑞芳)、高雄捷運站、火車站(台南、彰化、桃園...等)
-                  <br />
-                  - SEO、網頁維護、增加流量：GOOGLE關鍵字搜尋排名第一
-                </div>
+          </div>
+          <!-- lalalocker工作經驗 -->
+          <div class="box">
+            <div>工作經歷</div>
+            <div class="d-flex">
+              <div class="d-flex mobileDate">
+                <span class="title">共同創辦人</span>
+                <span>2017.9 - 2018.3</span>
+              </div>
+              <div class="d-flex mobileDate">
+                <span>Lalalocker</span>
+                <span>Taipei, Taiwan</span>
+              </div>
+              <div class="boxContent">
+                - 利用自己搭建的網路平台媒合店家的彈性空間成為旅客的寄物點
+                <br />
+                - 合作陌生店家開發：三個月20+合作店家 <br />
+                遍及全台，包括台北捷運站(市府、國父紀念館等)、觀光區(瑞芳)、高雄捷運站、火車站(台南、彰化、桃園...等)
+                <br />
+                - SEO、網頁維護、增加流量：GOOGLE關鍵字搜尋排名第一
               </div>
             </div>
-            <!-- 補習班工作經驗 -->
-            <div class="box">
-              <div>工作經歷</div>
-              <div class="d-flex">
-                <div class="d-flex">
-                  <div class="title">數學老師</div>
-                  <div>2017.2 - 2018.3</div>
-                </div>
-                <div class="d-flex">
-                  <div>全腦菁英數學</div>
-                  <div>Taipei, Taiwan</div>
-                </div>
-                <div class="boxContent">
-                  - 傳授國中數學觀念、邏輯思考、解題方式，並解決學生數學問題
-                </div>
+          </div>
+          <!-- 補習班工作經驗 -->
+          <div class="box">
+            <div>工作經歷</div>
+            <div class="d-flex">
+              <div class="d-flex mobileDate">
+                <span class="title">數學老師</span>
+                <span>2017.2 - 2018.3</span>
+              </div>
+              <div class="d-flex mobileDate">
+                <span>全腦菁英數學</span>
+                <span>Taipei, Taiwan</span>
+              </div>
+              <div class="boxContent">
+                - 傳授國中數學觀念、邏輯思考、解題方式，並解決學生數學問題
               </div>
             </div>
           </div>
@@ -211,53 +212,83 @@
     </div>
     <div class="page2">
       <div>
-        <div>
-          <div class="topic">PORTFOLIOS</div>
-          <hr />
-          <div class="works d-flex">
-            <!-- bootstrap -->
-            <div class="d-flex">
-              <a href="./bootstrap-practice/bootstrap.html"
-                ><div class="workTitle">Bootstrap 電商網站RWD切版練習</div></a
-              >
-              <div class="mywork">
-                <a href="./bootstrap-practice/bootstrap.html">
-                  <img class="myworkImg" src="./bootstrap-practice.png" alt=""
-                /></a>
-              </div>
-              <a href="http://www.unlimit.style/">參考網站: Unlimit</a>
+        <div class="topic">PORTFOLIOS</div>
+        <hr />
+        <div class="works d-flex">
+          <!-- StrayMao -->
+          <div class="card">
+            <div class="workTitle">[React] React專題實作</div>
+            <div class="workImg">
+              <img src="../images/react.png" alt=""/>
             </div>
-            <!-- 1A2B -->
-            <div class="d-flex">
-              <a href="./js-practice/guess/guess.html"
-                ><div class="workTitle">JavaScript練習(猜數字小遊戲)</div></a
-              >
-              <div class="mywork">
-                <a href="./js-practice/guess/guess.html">
-                  <img
-                    class="myworkImg2"
-                    src="./js-practice/guess/1a2b.png"
-                    alt=""
-                /></a>
-              </div>
-            </div>
-            <!-- todolist -->
-            <div class="d-flex">
-              <a href="./js-practice/todolist/todolist.html"
-                ><div class="workTitle">
-                  JavaScript練習(Todo List 代辦事項)
-                </div></a
-              >
-              <div class="mywork">
-                <a href="./js-practice/todolist/todolist.html">
-                  <img
-                    class="myworkImg2"
-                    src="./js-practice/todolist/todo list.png"
-                    alt=""
-                /></a>
-              </div>
-            </div>
+            <p>簡介：<br>使用React框架中的函式元件，搭配Hook(useState, useEffect)，切版使用React-Bootstrap，也使用Ant Design做一些動畫及滾動視差</p>
+            <a href="https://github.com/tsun-yu/StrayMao-front-end"><u>Github連結</u></a>
           </div>
+          <!-- ins -ajax -->
+          <div class="card">
+            <a href="../ins-ajax-bootstrap/index.html"
+              ><div class="workTitle">[AJAX+Bootstrap] Instagram API</div></a
+            >
+            <div class="workImg">
+              <a href="../ins-ajax-bootstrap/index.html">
+                <img   src="../images/ins-ajax-bootstrap.png" alt=""
+              /></a>
+            </div>
+            <p>簡介：<br>使用jQuery函式庫中的AJAX，並透過Instagram的API，獲取專頁上追蹤人數、大頭照、前12篇PO文照片等資訊，並利用Bootstrap切版呈現。</p>
+            <a href="https://www.instagram.com/p.league.official/"><u>參考網站: P.League instagram</u></a>
+          </div>
+          <!-- bootstrap -->
+          <div class="card">
+            <a href="../bootstrap-practice/bootstrap.html"
+              ><div class="workTitle">[Bootstrap] 電商首頁RWD切版</div></a
+            >
+            <div class="workImg">
+              <a href="../bootstrap-practice/bootstrap.html">
+                <img   src="./bootstrap-practice.png" alt=""
+              /></a>
+            </div>
+            <p>簡介：<br>以電商首頁作為範例，使用Bootstrap框架刻板，並做RWD響應式設計。</p>
+            <a href="http://www.unlimit.style/"><u>參考網站: Unlimit</u></a>
+          </div>
+          <!-- Black jack -->
+          <div class="card">
+            <a href="../js-practice/black-jack/index.html"
+              ><div class="workTitle">[JavaScript] Black Jack 21點</div></a
+            >
+            <div class="workImg">
+              <a href="../js-practice/black-jack/index.html">
+                <img src="../js-practice/black-jack/black-jack.png" alt=""/>
+              </a>
+            </div>
+            <p>簡介：<br>利用Class產生一副52張撲克牌並洗牌，莊家點數若小於玩家點數或17點就會要牌；Ace同時可以當作11點或1點，會依照目前的總和自動判斷。</p>
+          </div>
+          <!-- 1A2B -->
+          <div class="card">
+            <a href="../js-practice/guess/guess.html"
+              ><div class="workTitle">[JavaScript] 猜數字</div></a
+            >
+            <div class="workImg">
+              <a href=../js-practice/guess/guess.html>
+                <img src="../js-practice/guess/1a2b.png" alt=""/>
+              </a>
+            </div>
+            <p>簡介：<br>電腦隨機出一組4個不重複的數字，使用者猜出該組答案，數字及位置皆正確即為A，數字對位置錯即為B，依提示猜出最終答案。</p>
+          </div>
+          <!-- todo list -->
+          <div class="card">
+            <a href="../js-practice/guess/guess.html"
+              ><div class="workTitle">[JavaScript] Todo-list 代辦事項</div></a
+            >
+            <div class="workImg">
+              <a href="../js-practice/todolist/todolist.html">
+                <img src="../js-practice/todolist/todo-list.png" alt=""/>
+              </a>
+            </div>
+            <p>簡介：<br>使用者可以新增、修改、刪除任何記事，內容皆存在Local Storage中</p>
+          </div>
+          
+          
+        
         </div>
       </div>
     </div>

@@ -1,10 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Noto Sans TC", sans-serif, Arial, sans-serif;
   color: #555;
-  box-sizing: content-box;
+  /* box-sizing: border-box; */
 }
 a {
   text-decoration: none;
@@ -43,18 +42,18 @@ hr {
 }
 
 .homepage,
-.page1,
-.page2 {
+.page1 {
   background-size: cover;
   background-position: center;
   height: 100vh;
 }
 .page2 {
-  height: 200vh;
+  background-size: cover;
+  background-position: center;
 }
+
 .homepage {
-  height: 100vh;
-  background-image: url(./images/nyc.jpg);
+  background-image: url(../images/nyc.jpg);
 }
 .homepage > .d-flex {
   background-color: rgba(0, 0, 0, 0.5);
@@ -70,29 +69,88 @@ hr {
   font-weight: 900;
   text-shadow: 1px 1px 2px #555;
 }
-.smallword > div {
+.smallword {
+  flex-direction: column;
+}
+.smallword span {
   color: #ffffffd0;
   font-size: 1.125rem;
   text-align: center;
 }
-.smallword > div:nth-child(2) {
+.smallword > span:nth-child(2) {
   color: #fdc300;
 }
 
+.about {
+  background-color: #fdc300;
+  padding: 5% 0;
+  height: 40vh;
+  min-height: 20rem;
+}
+.about hr {
+  background-color: #fff;
+}
+.aboutContent {
+  text-align: center;
+}
+.aboutContent h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.introduction {
+  font-size: 1.25rem;
+  padding: 0 6rem;
+  color: #fff;
+  margin: 2rem;
+}
+
+.skill {
+  background-color: #eee;
+  height: 50vh;
+  min-height: 26rem;
+  padding: 5% 10%;
+}
+.skill .topic {
+  color: rgb(17, 17, 17);
+}
+
+.skillSection {
+  width: 25%;
+  text-align: center;
+}
+.skillSection h2 {
+  font-weight: 500;
+  font-size: 1.85rem;
+  color: #222222;
+}
+
+.skillSection div {
+  font-size: 1.25rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.skillsItems {
+  line-height: 2rem;
+}
+
 .page1 {
-  background-image: url(./images/lincoln-center-for-the-performing-arts-3840x2160-new-york-ny-usa-8540.jpg);
+  background-image: url(../images/lincoln-center-for-the-performing-arts-3840x2160-new-york-ny-usa-8540.jpg);
   background-attachment: fixed;
+  overflow: hidden;
 }
-.page1 > div {
+.page1 > .d-flex {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 90vh;
-  width: 100vw;
-  padding: 5vh 0;
-}
-.page1 > div > .d-flex {
+  height: 100%;
+  width: 100%;
+  padding: 5% 0;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
 }
+
 .topic {
   font-size: 3rem;
   color: #ffffff;
@@ -114,147 +172,92 @@ hr {
   border-radius: 20px;
   box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  padding: 10px;
-  margin: 20px;
+  padding: 0.625rem;
+  margin: 1.25rem;
 }
 .box > .d-flex {
   flex-direction: column;
   justify-content: center;
   margin: 1vh 0;
 }
-.box > .d-flex > .d-flex {
+.mobileDate {
   justify-content: space-between;
 }
-.box > .d-flex > .d-flex:nth-child(2) {
+.d-flex > .mobileDate:nth-child(2) {
   margin-bottom: 0.3rem;
 }
-.box > .d-flex > .d-flex > div {
+.mobileDate > span {
   color: rgb(29, 29, 29);
 }
-.boxContent {
-  font-family: 'Noto Sans TC', sans-serif;
-  color: rgb(39, 39, 39);
-}
 .title {
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
 }
-.about {
-  background-color: #fdc300;
-  padding: 5% 0;
-  height: 40vh;
-}
-.about hr {
-  background-color: #fff;
-}
-.aboutContent {
-  text-align: center;
-}
-.aboutContent > p {
-  color: #fff;
-  margin: 2rem;
-}
-.aboutContent > p:nth-child(1) {
-  font-size: 1.5rem;
+.boxContent {
+  font-family: "Noto Sans TC", sans-serif;
+  color: rgb(39, 39, 39);
 }
 
-.introduction {
-  font-size: 1.25rem;
-  padding: 0 6rem;
-}
-/* .linkTo {
-  margin: 2rem;
-}
-.linkTo a {
-  margin: 0 0.5rem;
-}
-.linkTo i {
-  color: #fff;
-  font-size: 2rem;
-  transition: 0.5s;
-} */
-/* .linkTo i:hover {
-  color: #fda400;
-} */
-
-.skill {
-  background-color: #eee;
-  height: 50vh;
-  padding: 5% 10%;
-}
-.skill .topic {
-  color: rgb(17, 17, 17);
-}
-
-.skill > .d-flex {
-  height: 70%;
-}
-.skillSection {
-  width: 25%;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-}
-.skillSection > div:nth-child(1) {
-  font-size: 1.85rem;
-  color: #222222;
-}
-.skillSection > .d-flex {
-  font-size: 1.5rem;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 3vh;
-}
-
-.skillsItems {
-  margin: 10px 0;
-}
 .page2 {
-  background-image: url(./images/lincoln-center-for-the-performing-arts-3840x2160-new-york-ny-usa-8540.jpg);
+  background-image: url(../images/lincoln-center-for-the-performing-arts-3840x2160-new-york-ny-usa-8540.jpg);
   background-attachment: fixed;
+  /* min-height: 900px; */
 }
 .page2 > div {
   background-color: rgba(0, 0, 0, 0.2);
-  height: 200vh;
+  /* height: 100vh; */
+  min-height: 1000px;
   width: 100vw;
-}
-.page2 > div > div {
-  padding: 5vh 10%;
+  padding: 5% 10% 0 10%;
+  box-sizing: border-box;
 }
 
 .works {
   flex-wrap: wrap;
-}
-.works > div {
-  width: 50%;
+  justify-content: space-around;
 }
 
-.works > .d-flex {
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem 0;
+.card {
+  height: 25rem;
+  width: 22rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
 }
+
 .workTitle {
-  font-size: 2rem;
+  text-align: center;
+  font-size: 1.25rem;
   color: #eee;
   text-decoration: none;
+  color: #555;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: #eee solid 2px;
+  line-height: 1.5rem;
 }
 
-.workTitle {
-  color: #fff;
-  margin-bottom: 1rem;
-  border-bottom: #eee solid 1px;
-}
-.mywork {
-  width: 95%;
-  height: 60vh;
-  text-align: center;
-  overflow:scroll;
-}
-.myworkImg,
-.myworkImg2 {
+.workImg {
   width: 100%;
+  height: 10rem;
+  text-align: center;
+  overflow: scroll;
+  margin-bottom: 1rem;
+}
+.workImg img{
+  width: 100%;
+}
+
+.workImg a img {
+  width: 100%;
+}
+
+.myworkImg2 {
+  height: 100%;
 }
 .contact {
   height: 60vh;
@@ -269,7 +272,7 @@ hr {
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
-  background-image: url(./images/大頭照.jpg);
+  background-image: url(../images/大頭照.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -302,7 +305,7 @@ i:hover {
 }
 
 .footer {
-  background-image: url(./images/lincoln-center-for-the-performing-arts-3840x2160-new-york-ny-usa-8540.jpg);
+  background-image: url(../images/lincoln-center-for-the-performing-arts-3840x2160-new-york-ny-usa-8540.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -337,14 +340,13 @@ i:hover {
     font-size: 1.25rem;
   }
 
-  .aboutContent>p{
+  .aboutContent > p {
     margin: 1rem 0;
   }
 
   .introduction {
     font-size: 1rem;
     padding: 0;
-
   }
   .skill {
     height: 175vh;
