@@ -228,6 +228,10 @@ hr {
   padding: 1rem;
   box-sizing: border-box;
   margin-bottom: 2rem;
+  transition: 0.5s;
+}
+.card:hover {
+  transform: scale(1.05, 1.05);
 }
 
 .workTitle {
@@ -249,7 +253,7 @@ hr {
   overflow: scroll;
   margin-bottom: 1rem;
 }
-.workImg img{
+.workImg img {
   width: 100%;
 }
 
